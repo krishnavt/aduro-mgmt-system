@@ -44,3 +44,10 @@ aduro-service/.classpath
 aduro-repository/target/classes/META-INF/maven/com.aduro/aduro-repository/pom.xml
 aduro-repository/target/classes/META-INF/maven/com.aduro/aduro-repository/pom.properties
 aduro-repository/target/classes/META-INF/MANIFEST.MF
+.project
+.settings/org.eclipse.core.resources.prefs
+.settings/org.eclipse.m2e.core.prefs
+aduro-domain/.settings/org.springframework.ide.eclipse.prefs
+aduro-repository/.settings/org.springframework.ide.eclipse.prefs
+aduro-service/.settings/org.springframework.ide.eclipse.prefs
+aduro-web/target/classes/org/aduro/web/App.class
