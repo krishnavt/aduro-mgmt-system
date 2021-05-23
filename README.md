@@ -50,3 +50,9 @@ The app defines following CRUD APIs.
     DELETE /api/delete-employee/{id}
 
 You can test them using postman or any other rest client.
+
+## Screenshots
+
+![alt text](https://github.com/krishnavt/image-in-readme/blob/main/Screen%20Shot%202021-05-23%20at%209.25.10%20AM.png)
+
+
