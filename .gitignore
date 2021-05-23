@@ -51,3 +51,5 @@ aduro-domain/.settings/org.springframework.ide.eclipse.prefs
 aduro-repository/.settings/org.springframework.ide.eclipse.prefs
 aduro-service/.settings/org.springframework.ide.eclipse.prefs
 aduro-web/target/classes/org/aduro/web/App.class
+aduro-domain/target/classes/com/aduro/assessment/employee/Employee.class
+*.class
