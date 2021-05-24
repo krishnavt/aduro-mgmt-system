@@ -39,9 +39,9 @@ The app will start running at <http://localhost:8080>.
 
 The app defines following CRUD APIs.
 
-    GET /api/create-employees
+    POST /api/create-employees
     
-    POST /api/list-employees
+    GET /api/list-employees
     
     GET /api/get-employee/{id}
     
@@ -50,3 +50,23 @@ The app defines following CRUD APIs.
     DELETE /api/delete-employee/{id}
 
 You can test them using postman or any other rest client.
+
+## Screenshots
+
+    POST create-employees
+
+![alt text](https://github.com/krishnavt/image-in-readme/blob/main/Screen%20Shot%202021-05-23%20at%209.25.10%20AM.png)
+
+    GET list-employees
+    
+![alt text](https://github.com/krishnavt/image-in-readme/blob/main/Screen%20Shot%202021-05-23%20at%209.25.22%20AM.png)
+    
+    GET get-employee
+![alt text](https://github.com/krishnavt/image-in-readme/blob/main/Screen%20Shot%202021-05-23%20at%209.25.32%20AM.png)
+    
+    PUT update-employee
+
+![alt text](https://github.com/krishnavt/image-in-readme/blob/main/Screen%20Shot%202021-05-23%20at%209.25.44%20AM.png)
+
+    DELETE delete-employee
+![alt text](https://github.com/krishnavt/image-in-readme/blob/main/Screen%20Shot%202021-05-23%20at%209.25.55%20AM.png) 
