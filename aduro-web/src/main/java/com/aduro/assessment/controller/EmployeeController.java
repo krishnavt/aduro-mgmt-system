@@ -1,4 +1,4 @@
-package com.aduro.assessment.controller.employee;
+package com.aduro.assessment.controller;
 
 import java.util.List;
 
