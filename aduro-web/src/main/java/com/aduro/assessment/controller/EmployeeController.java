@@ -20,6 +20,8 @@ import com.aduro.assessment.employee.Employee;
 import com.aduro.assessment.employee.request.EmployeeRequest;
 import com.aduro.assessment.service.employee.exceptions.ResourceNotFoundException;
 
+import lombok.extern.log4j.Log4j2;
+
 /**
  * @author vamsithatikonda
  * 
@@ -28,6 +30,7 @@ import com.aduro.assessment.service.employee.exceptions.ResourceNotFoundExceptio
  */
 @RestController
 @RequestMapping("/api")
+@Log4j2
 public class EmployeeController {
 
 	/**
@@ -47,7 +50,7 @@ public class EmployeeController {
 	 */
 	@PostMapping("/create-employees")
 	public ResponseEntity<?> createEmployee(@Valid @RequestBody EmployeeRequest employees) {
-
+		log.info("Creating Employee {} ", employees);
 		for (Employee employee : employees.getEmployees()) {
 			EmployeeRepository.save(employee);
 		}
@@ -64,6 +67,7 @@ public class EmployeeController {
 	 */
 	@GetMapping("/list-employees")
 	public List<Employee> getAllEmployees() {
+		log.info("Reading All Employees {} ");
 		return EmployeeRepository.findAll();
 	}
 
@@ -78,6 +82,7 @@ public class EmployeeController {
 	 */
 	@GetMapping("/get-employee/{id}")
 	public Employee getEmployeeById(@PathVariable(value = "id") Long EmployeeId) {
+		log.info("Get Employee id : {} ", EmployeeId);
 		return EmployeeRepository.findById(EmployeeId)
 				.orElseThrow(() -> new ResourceNotFoundException("Employee", "id", EmployeeId));
 	}
@@ -95,6 +100,8 @@ public class EmployeeController {
 	@PutMapping("/update-employee/{id}")
 	public Employee updateEmployee(@PathVariable(value = "id") Long EmployeeId,
 			@Valid @RequestBody Employee EmployeeDetails) {
+
+		log.info("Update Employee id : {} ", EmployeeId);
 
 		Employee Employee = EmployeeRepository.findById(EmployeeId)
 				.orElseThrow(() -> new ResourceNotFoundException("Employee", "id", EmployeeId));
@@ -122,6 +129,9 @@ public class EmployeeController {
 	 */
 	@DeleteMapping("/delete-employee/{id}")
 	public ResponseEntity<?> deleteEmployee(@PathVariable(value = "id") Long EmployeeId) {
+
+		log.info("Delete Employee id : {} ", EmployeeId);
+
 		Employee Employee = EmployeeRepository.findById(EmployeeId)
 				.orElseThrow(() -> new ResourceNotFoundException("Employee", "id", EmployeeId));
 
